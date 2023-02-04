@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_project/GetxNavigation/MyTabController.dart';
+import 'package:getx_project/GetxNavigation/Validation.dart';
 
+import 'GetxNavigation/ScreenFive.dart';
+import 'GetxNavigation/ScreenFour.dart';
+import 'GetxNavigation/ScreenThree.dart';
 import 'GetxNavigation/ScreenTwo.dart';
 
 void main() {
@@ -33,11 +38,29 @@ class _MyAppState extends State<MyApp> {
             },
             child: Text("ScreeTwo로이동"),
           ),
+          RaisedButton(onPressed: (){
+            Get.to(ScreenThree());
+          },
+          child:Text("screenThree이동"),),
+          RaisedButton(onPressed: (){
+            Get.to(ScreenFive());
+          },
+            child:Text("screenFive이동"),),
+
+          RaisedButton(onPressed: (){
+            Get.to(MyFormValidation());
+          },
+            child:Text("Myform"),),
           RaisedButton(
-              onPressed: () {
-                Get.offAll(ScreenTwo());
-              },
-              child: Text("기록삭제하고 이동")),
+            onPressed: () async {
+              final resp = await Get.to(MyTabController());
+              setState(() {
+                returnVal = resp;
+              });
+            },
+            child: Text("TabController이동"),
+          ),
+
           RaisedButton(
             onPressed: () async {
               final resp = await Get.to(ScreenTwo());
