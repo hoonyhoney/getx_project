@@ -33,7 +33,7 @@ class _ScreenThreeState extends State<ScreenThree> {
               ),
             ),
           ),
-          RaisedButton(onPressed: (){
+          OutlinedButton(onPressed: (){
             setState(() {
             final random = Random();
               _width = random.nextInt(300).toDouble();
@@ -41,7 +41,7 @@ class _ScreenThreeState extends State<ScreenThree> {
               _color = Color.fromRGBO(random.nextInt(256),random.nextInt(256),random.nextInt(256),1);
               _borderRadius = BorderRadius.circular(random.nextInt(100).toDouble());
             });
-          }),
+          }, child: null,),
         ],
       ),
     );

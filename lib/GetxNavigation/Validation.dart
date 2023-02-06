@@ -27,7 +27,7 @@ class _MyFormValidationState extends State<MyFormValidation> {
                 }
               },
             ),
-            RaisedButton(onPressed: (){
+            TextButton(onPressed: (){
                 if(_formKey.currentState!.validate()){
                   Get.snackbar('처리중', '처리중입니다.'
                     ,

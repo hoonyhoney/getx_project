@@ -45,11 +45,11 @@ class _ScreenFourState extends State<ScreenFour> {
                 ),
               ),
             ),
-            RaisedButton(onPressed: (){
+            OutlinedButton(onPressed: (){
               setState(() {
                 _visible = !_visible;
               });
-            }),
+            }, child: null,),
           ],
         ),
       ),

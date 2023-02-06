@@ -21,7 +21,7 @@ class _ScreenTwoState extends State<ScreenTwo> {
               height: 500,
             ),
             Text("스크린 TWO"),
-            RaisedButton(
+            TextButton(
               onPressed: () {
                 Get.back(result: radioVal);
               },
